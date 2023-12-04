@@ -9,5 +9,9 @@ searchButton.addEventListener('click', () => {
 
   if (searchTerm !== '') {
     const apiUrl = 'https://valorant-api.com/v1/weapons/skins';
+    // Grab data from API
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {});
   }
 });
