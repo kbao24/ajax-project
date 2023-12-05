@@ -9,16 +9,20 @@ searchButton.addEventListener('click', () => {
 
   if (searchTerm !== '') {
     const apiUrl = 'https://valorant-api.com/v1/weapons/skins';
+
     // Grab data from API
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
+        // Filter
         const matchingSkins = data.data.filter((skin) => {
           return skin.displayName.toLowerCase().includes(searchTerm);
         });
 
         if (matchingSkins.length > 0) {
           resultContainer.innerHTML = '';
+
+          // Iterate through skins
           matchingSkins.forEach((skin) => {
             const skinElement = document.createElement('div');
             skinElement.classList.add('skin'); //
