@@ -12,6 +12,10 @@ searchButton.addEventListener('click', () => {
     // Grab data from API
     fetch(apiUrl)
       .then((response) => response.json())
-      .then((data) => {});
+      .then((data) => {
+        const matchingSkins = data.data.filter((skin) => {
+          return skin.displayName.toLowerCase().includes(searchTerm);
+        });
+      });
   }
 });
