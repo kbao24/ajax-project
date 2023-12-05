@@ -1,14 +1,14 @@
+header {
+  padding: 20px;
+  background-color: #d9556b;
+  color: #fff;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #162535;
   margin: 0;
   padding: 0;
-}
-
-header {
-  padding: 20px;
-  background-color: #d9556b;
-  color: #fff;
 }
 
 main {
